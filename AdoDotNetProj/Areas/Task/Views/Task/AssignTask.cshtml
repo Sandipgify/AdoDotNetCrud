@@ -1,0 +1,29 @@
+﻿@model AdoDotNetProj.EntityModels.Dto.TaskDto
+
+@{
+    ViewData["Title"] = "AssignTask";
+}
+
+<h1>AssignTask</h1>
+
+<h4>TaskDto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AssignTask">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="AssignTo" class="control-label"></label>
+                @Html.DropDownListFor(model => model.AssignTo, new SelectList(ViewBag.userList, "Id", "FullName"), "--Select--", new { @class = "form-control" })
+                <span asp-validation-for="AssignTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Assign Task" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

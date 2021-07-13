@@ -1,0 +1,64 @@
+﻿@model User.EntityModels.Dto.UserDto
+
+@{
+    ViewData["Title"] = "Register";
+
+}
+<div class="row">
+    <div class="offset-md-4 col-md-4">
+
+        <h4 style="text-align:center">User Registration</h4>
+
+        <form asp-action="Register">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="FirstName" class="form-control" placeholder="First Name" required />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="LastName" class="form-control" placeholder="Last Name" required />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="ContactNo" class="form-control" placeholder="Contact Number" />
+                <span asp-validation-for="ContactNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Email" class="form-control" required placeholder="UserEmail" type="email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Password" onkeyup="checkPass();" id="Password" class="form-control" placeholder="Password" type="password" required />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="password" onkeyup="checkPass();" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password" required>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn btn-primary btn-block">Register</button>
+            </div>
+            <span class="missmatch" style="color:red"></span>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script>
+    function checkPass() {
+        var pass = document.getElementById("Password").value;
+        var rpass = document.getElementById("password_confirmation").value;
+        if (pass != rpass) {
+            document.getElementById("submit").disabled = true;
+            $('.missmatch').html("Entered Password is not matching!! Try Again");
+        } else {
+            $('.missmatch').html("");
+            document.getElementById("submit").disabled = false;
+        }
+    }
+
+</script>

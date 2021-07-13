@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoDotNetProj", "AdoDotNetProj\AdoDotNetProj.csproj", "{D3EA51CC-2E7D-4D7C-99E4-93F0B6BE3F71}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User", "User\User.csproj", "{97E90DF6-F42B-445E-8851-244A57068C36}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database", "Database\Database.csproj", "{6C915917-366A-4AD1-B539-6972D525FDD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3EA51CC-2E7D-4D7C-99E4-93F0B6BE3F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EA51CC-2E7D-4D7C-99E4-93F0B6BE3F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EA51CC-2E7D-4D7C-99E4-93F0B6BE3F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EA51CC-2E7D-4D7C-99E4-93F0B6BE3F71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97E90DF6-F42B-445E-8851-244A57068C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E90DF6-F42B-445E-8851-244A57068C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E90DF6-F42B-445E-8851-244A57068C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E90DF6-F42B-445E-8851-244A57068C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C915917-366A-4AD1-B539-6972D525FDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C915917-366A-4AD1-B539-6972D525FDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C915917-366A-4AD1-B539-6972D525FDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C915917-366A-4AD1-B539-6972D525FDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D6C18CA-0B7B-4670-A44E-81C341E7EB00}
+	EndGlobalSection
+EndGlobal
